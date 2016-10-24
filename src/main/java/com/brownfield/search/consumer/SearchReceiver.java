@@ -1,7 +1,8 @@
 package com.brownfield.search.consumer;
 
 
-import com.brownfield.search.SearchService;
+
+import com.brownfield.search.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.integration.annotation.ServiceActivator;

@@ -24,9 +24,10 @@ public class Flight {
     private String destination;
     private String flightDate;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "inv_Id")
-    Inventory inventory;
-    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fare_Id")
     private Fare fare;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "inv_Id")
+    Inventory inventory;
+
 }

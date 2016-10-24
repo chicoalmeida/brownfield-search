@@ -1,4 +1,4 @@
-package com.brownfield.search;
+package com.brownfield.search.service;
 
 import com.brownfield.search.entity.Flight;
 import com.brownfield.search.exception.NoFlightAvailableException;
