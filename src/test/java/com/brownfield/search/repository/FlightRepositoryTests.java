@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -20,7 +19,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class FlightRepositoryTest {
+public class FlightRepositoryTests {
 
     private static final String FLIGHT_NUMBER = "101";
     private static final String FLIGHT_DATE = "16-10-2016";
@@ -51,7 +50,6 @@ public class FlightRepositoryTest {
 
         entityManager.persist(flightFixture);
 
-
     }
 
     @Test
@@ -71,7 +69,7 @@ public class FlightRepositoryTest {
     }
 
     @Test
-    public void findByOriginAndDestinationAndFlightDate_ShouldReturnAListOfAvailableFights_WhenValidParamsArePassed(){
+    public void findByOriginAndDestinationAndFlightDate_ShouldReturnAListOfAvailableFights_WhenValidParamsArePassed() {
 
         Optional<List<Flight>> result = target.findByOriginAndDestinationAndFlightDate("RJ", "SPO", FLIGHT_DATE);
 
@@ -80,7 +78,6 @@ public class FlightRepositoryTest {
         assertThat(result.get(), hasItem(flightFixture));
 
     }
-
 
 
 }

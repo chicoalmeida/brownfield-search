@@ -19,7 +19,6 @@ import static java.util.Arrays.asList;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableSwagger2
 @Slf4j
 public class BrownFieldSearchApplication implements CommandLineRunner {
 

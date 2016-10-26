@@ -1,0 +1,13 @@
+
+spring:
+    application:
+        name: search-service
+    cloud:
+      config:
+        discovery:
+          enabled: false
+        enabled: false
+eureka:
+  client:
+    enabled: false
+swagger.enabled: false
